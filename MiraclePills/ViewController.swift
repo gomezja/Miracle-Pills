@@ -20,6 +20,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBtn: UIButton!
     
+    @IBOutlet weak var successImg: UIImageView!
+    @IBOutlet weak var successView: UIView!
+    
     let states = ["Alaska", "California", "Texas", "Wyoming"]
     
     override func viewDidLoad() {
@@ -65,6 +68,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         planetInput.isHidden = false
         planetField.isHidden = false
+    }
+    @IBAction func BuyNowBtn(_ sender: Any) {
+        successView.isHidden = false
+        successImg.isHidden = false
     }
 }
 

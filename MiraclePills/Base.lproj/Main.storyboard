@@ -155,16 +155,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9x-vf-Wp5">
+                                <rect key="frame" x="73" y="562" width="229" height="45"/>
+                                <state key="normal" title="BuyNow" image="buyNowBtn"/>
+                                <connections>
+                                    <action selector="BuyNowBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LqP-za-QyG"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JF7-vp-y5E" userLabel="SuccessView">
+                                <rect key="frame" x="0.0" y="-1" width="375" height="668"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.70201733732876703" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="m1a-7C-HHQ">
+                                <rect key="frame" x="68" y="280" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="f6d-Pe-grL" firstAttribute="trailing" secondItem="HYf-Gz-aSB" secondAttribute="trailing" id="0FY-cT-all"/>
                             <constraint firstItem="qnt-hl-G7e" firstAttribute="trailing" secondItem="g6V-9u-9uI" secondAttribute="trailing" id="0bj-DT-8tn"/>
+                            <constraint firstItem="x9x-vf-Wp5" firstAttribute="top" secondItem="TJT-2G-d3c" secondAttribute="bottom" constant="40" id="0hC-YF-k8m"/>
                             <constraint firstItem="JR2-qh-6c4" firstAttribute="top" secondItem="7jY-Ia-5u8" secondAttribute="bottom" constant="8" id="0m9-ns-4xy"/>
                             <constraint firstItem="hb0-R0-gyT" firstAttribute="top" secondItem="mkh-OV-D8O" secondAttribute="bottom" constant="8" id="1QJ-Wc-Rgb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qnt-hl-G7e" secondAttribute="trailing" constant="20" id="1WL-Ol-Q8d"/>
                             <constraint firstItem="sJe-S8-fNs" firstAttribute="top" secondItem="qnt-hl-G7e" secondAttribute="bottom" constant="8" id="3HH-Ju-dZY"/>
                             <constraint firstItem="HYf-Gz-aSB" firstAttribute="top" secondItem="Te1-UG-cHJ" secondAttribute="bottom" constant="8" id="44Z-8z-hM5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="x9x-vf-Wp5" secondAttribute="trailing" constant="57" id="5UP-kA-yLS"/>
                             <constraint firstItem="f6d-Pe-grL" firstAttribute="top" secondItem="HYf-Gz-aSB" secondAttribute="bottom" constant="8" id="5Xw-x1-mzZ"/>
                             <constraint firstItem="mkh-OV-D8O" firstAttribute="top" secondItem="f6d-Pe-grL" secondAttribute="bottom" constant="8" id="6Ii-I9-fuw"/>
                             <constraint firstItem="qnt-hl-G7e" firstAttribute="leading" secondItem="g6V-9u-9uI" secondAttribute="leading" id="7Ap-wZ-Idd"/>
@@ -199,10 +217,12 @@
                             <constraint firstItem="qzI-lX-dlx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="cs7-A6-H8u"/>
                             <constraint firstItem="y0s-Lk-VNa" firstAttribute="top" secondItem="JR2-qh-6c4" secondAttribute="bottom" constant="10" id="ePR-NA-35L"/>
                             <constraint firstItem="TJT-2G-d3c" firstAttribute="trailing" secondItem="VVM-9h-Kf7" secondAttribute="trailing" id="fsM-WJ-pWH"/>
+                            <constraint firstItem="x9x-vf-Wp5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="57" id="hK4-ye-ha7"/>
                             <constraint firstItem="hb0-R0-gyT" firstAttribute="trailing" secondItem="mkh-OV-D8O" secondAttribute="trailing" id="hiJ-jF-15P"/>
                             <constraint firstItem="2jJ-ld-Ioq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="jBW-YV-GH7"/>
                             <constraint firstItem="y0s-Lk-VNa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="kTr-md-aWZ"/>
                             <constraint firstItem="7jY-Ia-5u8" firstAttribute="centerX" secondItem="qzI-lX-dlx" secondAttribute="centerX" id="ljm-bb-qvZ"/>
+                            <constraint firstItem="x9x-vf-Wp5" firstAttribute="top" secondItem="TJT-2G-d3c" secondAttribute="bottom" constant="40" id="m1f-aQ-KSj"/>
                             <constraint firstItem="yjd-Vd-SVB" firstAttribute="trailing" secondItem="y0s-Lk-VNa" secondAttribute="trailing" id="mAa-Gj-XvC"/>
                             <constraint firstItem="TJT-2G-d3c" firstAttribute="top" secondItem="VVM-9h-Kf7" secondAttribute="bottom" constant="8" id="mbC-7d-vms"/>
                             <constraint firstItem="mkh-OV-D8O" firstAttribute="trailing" secondItem="f6d-Pe-grL" secondAttribute="trailing" id="mnx-XH-qXV"/>
@@ -227,6 +247,8 @@
                         <outlet property="planetInput" destination="TJT-2G-d3c" id="IMu-vV-PcT"/>
                         <outlet property="statePicker" destination="aB0-n3-oeB" id="J8X-6d-GBM"/>
                         <outlet property="statePickerBtn" destination="2jJ-ld-Ioq" id="HiM-6d-ZXf"/>
+                        <outlet property="successImg" destination="m1a-7C-HHQ" id="DWo-vg-ELd"/>
+                        <outlet property="successView" destination="JF7-vp-y5E" id="cWy-UQ-SHY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -235,6 +257,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="buyNowBtn" width="225" height="45"/>
         <image name="miraclePillEmoji" width="90" height="90"/>
+        <image name="successIndicator" width="180" height="180"/>
     </resources>
 </document>
