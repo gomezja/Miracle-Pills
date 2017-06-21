@@ -10,6 +10,13 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBOutlet weak var countryField: UILabel!
+    @IBOutlet weak var countryInput: UITextField!
+    
+    
+    @IBOutlet weak var planetField: UILabel!
+    @IBOutlet weak var planetInput: UITextField!
+    
     @IBOutlet weak var statePicker: UIPickerView!
     @IBOutlet weak var statePickerBtn: UIButton!
     
@@ -29,6 +36,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     @IBAction func stateButtonPressed(_ sender: Any) {
         statePicker.isHidden = false
+        
+        countryField.isHidden = true
+        countryInput.isHidden = true
+        
+        planetField.isHidden = true
+        planetInput.isHidden = true
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -46,6 +59,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         statePickerBtn.setTitle(states[row], for: UIControlState())
         statePicker.isHidden = true
+        
+        countryInput.isHidden = false
+        countryField.isHidden = false
+        
+        planetInput.isHidden = false
+        planetField.isHidden = false
     }
 }
 
